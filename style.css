@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px; /* Optional: Limit the maximum width of the row */
+    width: 100%;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    max-width: 400px;
+    margin: 10px;
+    background-color: #f4544c;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: lightblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .coupon {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    text-transform: uppercase;
+    background-color: #f4544c;
+  }
+  .coupon::before,
+  .coupon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .coupon::before {
+    left: 0;
+    background-image: radial-gradient(
+      circle at 0 50%,
+      transparent 25px,
+      gold 26px
+    );
+  }
+  
+  .coupon::after {
+    right: 0;
+    background-image: radial-gradient(
+      circle at 100% 50%,
+      transparent 25px,
+      gold 26px
+    );
+  }
+  
+  .coupon > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left {
+    width: 20%;
+    border-right: 2px dashed rgba(0, 0, 0, 0.13);
+  }
+  .left div {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  .center {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .right {
+    width: 120px;
+    background-image: radial-gradient(
+      circle at 100% 50%,
+      transparent 25px,
+      #fff 26px
+    );
+  }
+  .right div {
+    font-family: "Libre Barcode 128 Text", cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transform: rotate(-90deg);
+  }
+  
+  .center h2 {
+    background: #000;
+    color: gold;
+    padding: 0 10px;
+    font-size: 2.15rem;
+    white-space: nowrap;
+  }
+  
+  .center h3 {
+    font-size: 2.15rem;
+  }
+  .center small {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  
